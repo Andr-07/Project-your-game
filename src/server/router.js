@@ -9,16 +9,7 @@ router.get('/test', (req, res) => {
 });
 
 
-router.post('/allRests', async function (req, res, next) {
-  let rest = await Rest.find();
-  console.log(">>>>>>>>>>>>")
-  res.json(rest)
-});
-
-router.post('/addReview', async function (req, res, next) {
-  let response = req.body;
-  console.log(response)
-  let rest = await Reviews.find();
+router.post('/getQuestion', async function (req, res, next) {
   console.log(">>>>>>>>>>>>")
   res.json(rest)
 });
