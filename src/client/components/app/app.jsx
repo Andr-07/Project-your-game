@@ -20,14 +20,25 @@ class App extends React.Component {
     return (
       <div>
         <Router>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/game'>Game</Link>
-            </li>
-          </ul>
+<div>
+            <ul className="nav justify-content-end">
+                <li className="nav-item">
+                    <Link className="nav-link" to='/'>Home</Link>
+                </li>
+                <li className="nav-item">
+
+                    <Link className="nav-link" to='/game'>Game</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to='/game'>Login</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to='/game'>LogOut</Link>
+                </li>
+            </ul>
+<br/>
+</div>
+
           {/* <Route exact path='/' component={} /> */}
           <Route exact path='/game' component={Quiz} />
           <Route path='/game/:topic/:question' render={(props) => <Topic {...props} questions={this.state.question} />} />
